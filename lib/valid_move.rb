@@ -6,9 +6,13 @@ def valid_move?(board, index)
   if index < 1 
     return false
   elsif index > 9 
-  return false 
+    return false 
+  elsif position_taken?(board,index) 
+   return false
+ else 
+   return true
   end
-
+end
 
 def position_taken?(board, index)
   if board[index] == ""
